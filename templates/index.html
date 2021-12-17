@@ -1,0 +1,105 @@
+{% extends 'base/body.html' %}
+{% load static %}
+{% block title %}
+Главная страничка
+{% endblock %}
+
+{% block content %}
+    <div class="content container">
+	    	<div class="col-lg-9 col-sm-12 mx-auto mt-3">
+	    		<h1 class="text-center">Система электронного документооборота для вашей компании</h1>
+	    		<div class="row">
+	    			<div class="h5 text-center w-70 mx-auto mt-5">
+	    				Продуманная система по обмену цифровыми документами. Подписывайте, проверяйте, безопасно отправляйте документы в системе электронного документооборота "СЭД"
+	    			</div>
+	    		</div>
+	    		<div class="row">
+	    			<div class="text-center w-30  mx-auto mt-5">
+	    				{% if user.is_authenticated %}
+			                <a href="{% url 'profile' %}" class="customize-button"><div class="customize-button__text">Личный кабинет</div></a>
+			            {% else %}
+			           		<a href="{% url 'login' %}" class="customize-button"><div class="customize-button__text">Регистрация</div></a>
+			            {% endif %}
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="col mt-5">
+	    		<div class="h1 text-center">Преимущества сервиса</div>
+	    		<div class="row align-items-center mt-3">
+	    			<div class="col-lg-6 col-sm-12 benefit-card">
+						<div class="benefit-card__image-container">
+							<img src="{% static 'img/security.png' %}" class="benefit-card__image">
+						</div>
+						<div class="benefit-card__info">
+							<div class="benefit-card__title">Безопасность</div>
+							<div class="benefit-card__description">Грамотно продуманная инфраструктура сервиса СЭД гаранирует сохранность данных.</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-sm-12 benefit-card">
+						<div class="benefit-card__image-container">
+							<img src="{% static 'img/usd.png' %}" class="benefit-card__image">
+						</div>
+						<div class="benefit-card__info">
+							<div class="benefit-card__title">Бесплатный доступ</div>
+							<div class="benefit-card__description">Мы заботимся о наших пользователях, поэтому даем бесплатный доступ к сервису.</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-sm-12 benefit-card">
+						<div class="benefit-card__image-container">
+							<img src="{% static 'img/like.png' %}" class="benefit-card__image">
+						</div>
+						<div class="benefit-card__info">
+							<div class="benefit-card__title">Удобство</div>
+							<div class="benefit-card__description">Ничего лишнего. Интуитивно понятный дизайн, только нужные функции.</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-sm-12 benefit-card">
+						<div class="benefit-card__image-container">
+							<img src="{% static 'img/wrench.png' %}" class="benefit-card__image">
+						</div>
+						<div class="benefit-card__info">
+							<div class="benefit-card__title">Надежность</div>
+							<div class="benefit-card__description">Система доступна 24 часа в сутки благодаря грамотному распределению ресурсов приложения.</div>
+						</div>
+					</div>
+	    		</div>
+	    	</div>
+	    	<div class="col mt-5">
+    			<div class="h1 text-center">Как пользоваться сервисом?</div>
+    			<div class="h4 text-muted text-center">Пользовательское руководство</div>
+    			<div class="row justify-content-center">
+    				<div class="col-lg-10 mt-2">Система электронного документооборота предназначена для
+						автоматизации процессов организационно-правового документооборота в
+						предприятиях и компаниях в
+						соответствии с нормами делопроизводства и существующими регламентами с
+						целью создания единого документационного пространства.
+
+	    			</div>
+	    			<div class="col-lg-10 mt-2">
+	    				<div class="h5">Начало работы с системой:</div>
+	    				<ol>
+	    					<li>Откройте вкладку "Регистрация" в главном меню</li>
+	    					<li>Заполните все поля своей учетной записи. Обязательно запомните пароль и логин от личного кабинета</li>
+	    					<li>Зайдите на почту, которую указали при аутентификации и подтвердите регистрацию</li>
+	    					<li>Откройте вкладку "Вход" в главном меню</li>
+	    					<li>Введите свой логин и пароль</li>
+	    				</ol>
+	    				Если вы правильно запомнили логин и пароль, а также активировали учетную запись, то после этих дейсвий вы окажитесь в личном кабинете пользователя СЭДа.
+	    			</div>
+	    			<div class="col-lg-10 mt-2">
+	    				<div class="h5">Для зарегистрированных пользователей:</div>
+	    				Во вкладке "Личный кабинет" доступны следующие функции:
+	    				<ol>
+	    					<li>Генерация индивидуальной цифровой подписи. Генерация осуществляется только один раз, будьте внимательны, никому не доверяйте свою цифровую подпись, и, тем более, не удаляйте ее</li>
+	    					<li>Загрузка документов предприятия</li>
+	    					<li>Просмотр загруженных документов</li>
+	    					<li>Отправка документа на подпись</li>
+	    					<li>Проверка подписи документа</li>
+	    				</ol>
+	    				Система предлагает достаточный функционал для бесперебойной работы предприятия. Все опции продуманы, протестированы и безопасны, поэтому с уверенностью можете пользоваться сервисом СЭДа. Удачной работы!
+	    			</div>
+    			</div>
+    			
+	    	</div>
+	    </div>
+{% endblock %}

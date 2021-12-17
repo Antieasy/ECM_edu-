@@ -1,0 +1,27 @@
+{% extends 'base/body.html' %}
+{% load bootstrap4 %}
+{% block title %}
+   Подписать документ
+{% endblock %}
+{% block content %}
+    <div class="content container">
+    <h3>Для подписи вам необходимо загрузить свой приватный ключ</h3>
+        <form method="post" enctype="multipart/form-data">
+
+<div class="form-group row mt-4 d-flex align-items-center">
+    <label class="col-md-3 col-form-label" for="id_file">Ваш ключ</label>
+    <div class="col-md-9">
+        <div class="row bootstrap4-multi-input">
+        <div class="col-12">
+            <input type="file" name="file" class="" title="" required id="id_file">
+        </div>
+    </div>
+    </div>
+</div>
+    {% csrf_token %}
+<button type="submit" class="btn btn-success">Подписать</button>
+             </form>
+     </div>
+
+
+{% endblock %}

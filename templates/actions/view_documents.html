@@ -1,0 +1,42 @@
+{% extends 'base/body.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block title %}
+Мои документы
+{% endblock %}
+{% block content %}
+
+<div class="content container">
+  <div class="row">
+    <h2>Мои документы</h2>
+  </div>
+    <div class="row justify-content-between mt-3">
+      <div class="row-content"><h4>Документы</h4></div>
+      <div class="row-content"><h4>Подписи</h4></div>
+    </div>
+    {% if form|length >= 1 %}            
+      {% for i in form %}
+        <div class="row justify-content-between mt-3">
+          <div class="row-content">
+                  {% if '.pdf' in i.file.name %}
+                    <img src="{% static 'img/pdf.png' %}" alt="" class="document-icon">
+                  {% else %}
+                    <img src="{% static 'img/doc.png' %}" alt="" class="document-icon">
+                  {% endif %}
+                  <a href="{{ i.file.url }}" class="ml-2">{{ i.title }}</a>
+          </div>
+          <div class="row-content">
+
+                  {% for  j in i.sign_set.all %}
+                    <a href="../../../{{ j.path_to_sign }}">{{ j.author_name }};</a>
+                  {% endfor %}
+          {% if i.pk not in id_doc_where_sign %}
+                <a href="/accounts/profile/sign_document/{{ i.pk }}">Подписать</a>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

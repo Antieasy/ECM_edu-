@@ -1,0 +1,154 @@
+body {	
+	min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+nav.navbar {
+	box-shadow: 0 0 9px 2px #AAAAAA;
+}
+
+.content.container {
+	flex: 1 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.document-icon {
+	height: 40px;
+	width: auto;
+}
+.menu-icon-padding {
+	padding-right: 10px;
+}
+
+.customize-button {
+	display: block;
+	font-weight: bold;
+	font-size: 20px;
+	width: 220px;
+	border-radius: 25px;
+	background: #111111;
+	color: #FFFFFE;
+	box-shadow: 0 3px 8px 1px #AAAAAA;
+	transition: all 0.2s ease-in;
+}
+
+.customize-button__text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	height: 100%;
+}
+
+.customize-button:hover {
+	background: #323232;
+	box-shadow: 0 3px 8px 1px #AAAAAA;
+	text-decoration: none;
+	color: #FFFFFF;
+	transition: all 0.2s ease-in;
+}
+
+.customize-button:active {
+	background: #0e0e0e;
+	transition: all 0.1s ease-in;
+}
+
+.benefit-card {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	font-family: sans-serif;
+}
+
+.benefit-card__image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 150px;
+}
+
+.benefit-card__image {
+	padding: 10px;
+	width: 125px;
+	height: auto;
+}
+
+.benefit-card__info {
+	max-width: 350px;
+	padding-left: 10px;
+}
+
+.benefit-card__title {
+	font-size: 32px;
+}
+
+.benefit-card__title::after {
+	content: '';
+	display: block;
+	width: 100%;
+	border-bottom: 3px solid #111111;
+}
+
+.benefit-card__description {
+	padding-top: 10px;
+}
+.dev-card {
+	display: flex;
+	align-items: center;
+	font-family: sans-serif;
+}
+
+.dev-card__image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 300px;
+}
+
+.dev-card__image {
+	padding: 10px;
+	width: 300px;
+	height: auto;
+}
+
+.dev-card__info {
+	max-width: 500px;
+	padding-left: 10px;
+}
+
+.dev-card__title {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.dev-card__title-description {
+	padding-top: 10px;
+	font-size: 24px;
+	color: gray;
+}
+
+.dev-card__title::after {
+	content: '';
+	display: block;
+	width: 100%;
+	border-bottom: 3px solid #111111;
+}
+
+.dev-card__description {
+	padding-top: 10px;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	.dev-card {
+		flex-direction: column;
+	}
+}

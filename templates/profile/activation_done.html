@@ -1,0 +1,11 @@
+{% extends 'base/body.html' %}
+{% block title %}
+Активация выполнена
+{% endblock %}
+{% block content %}
+    <div class="content container">
+    <h2>Поздравляем, регистрация прошла успешно</h2>
+    <p>Теперь вы можете зайти в свой аккаунт:</p><br>
+    <a href="{% url 'login' %}" class="btn btn-success">Войти в личный кабинет</a>
+    </div>
+{% endblock %}

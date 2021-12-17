@@ -1,0 +1,17 @@
+{% extends "base/body.html" %}
+{% load bootstrap4 %}
+{% block title %}
+Правка личных данных
+{% endblock %}
+{% block content %}
+	<div class="container content">
+		<h2 class="mb-4">Правка личных данных пользователя {{ user.first_name }} {{ user.last_name }}</h2>
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{% bootstrap_form form layout='horizontal' %}
+			<div class="text-center mt-4">
+				<button type="submit" class="btn btn-success">Сохранить</button>
+			</div>
+		</form>
+	</div>
+{% endblock %}

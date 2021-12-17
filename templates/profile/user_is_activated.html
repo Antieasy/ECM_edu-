@@ -1,0 +1,11 @@
+{% extends "base/body.html" %}
+{% block title %}
+Пользователь уже активирован
+{% endblock %}
+{% block content %}
+    <div class="container content">
+<h2>Активация</h2>
+    <p>Пользователь с таким именем был активирован ранее.</p>
+    <p><a href="{% url 'login' %}">Войти на сайт</a></p>
+    </div>
+{% endblock %}

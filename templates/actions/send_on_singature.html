@@ -1,0 +1,20 @@
+{% extends 'base/body.html' %}
+{% load bootstrap4 %}
+{% block title %}
+Отправить документ
+{% endblock %}
+{% block content %}
+<div class="content container">
+    <h2 class="mb-4">Отправка документа на подпись</h2>
+    {% bootstrap_messages %}
+    <form method="post" enctype="multipart/form-data">
+        <div>
+            {% csrf_token %}
+            {% bootstrap_form form_sign layout='horizontal'%}
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success">Отправить</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

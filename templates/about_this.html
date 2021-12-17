@@ -1,0 +1,23 @@
+{% extends 'base/body.html' %}
+{% load static %}
+{% block title %}
+Информация о разработчике
+{% endblock %}
+{% block content %}
+    <div class="content container">
+    <h2>Информация о разработчике</h2>
+   <div class="col mt-5">
+   	<div class="dev-card">
+			<div class="dev-card__image-container">
+				<img src="{% static 'img/hacker2.png' %}" class="dev-card__image">
+			</div>
+			<div class="dev-card__info">
+				<div class="dev-card__title">Роман Козлов</div>
+				<div class="dev-card__title-description">Студент группы ББСО-01-18</div>
+				<div class="dev-card__description">Главный и единственный разработчик системы обмена документами, администратор сервиса СЭД.</div>
+				<div class="dev-card__description">По всем вопросам обращаться на почту: <i>sed@support.com</i></div>
+			</div>
+		</div>
+   </div>
+    </div>
+{% endblock %}
