@@ -4,4 +4,4 @@
 
 pycryptodome
 
-django-botstrap4
+django-bootstrap4
